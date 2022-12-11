@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Inter', "Helvetica Neue", sans-serif; }
+
+.container {
+    width: min(100% - 15px, 840px);
+    margin-inline: auto;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: URL('./assets/fonts/Inter/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 900;
+}

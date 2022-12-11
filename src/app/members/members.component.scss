@@ -1,0 +1,43 @@
+:host {
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    .title {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: 'Inter';
+            margin: 0 8px 0 0;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 12px;
+            background: #F9F5FF;
+            padding: 2px 8px;
+            border-radius: 16px;
+            color: #6941C6;
+        }
+    }
+
+    table {
+        width: 100%;
+
+        .striped-row {
+            background: #F9FAFB;
+        }
+
+        .mdc-data-table__header-cell {
+            font-size: 12px;
+        }
+        .mdc-data-table__cell {
+            font-size: 14px;
+        }
+    }
+}
