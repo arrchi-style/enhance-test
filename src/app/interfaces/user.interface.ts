@@ -1,0 +1,20 @@
+export interface IUser {
+    policyID: string;
+    statecode: string;
+    county: string;
+    eq_site_limit: string;
+    hu_site_limit: string;
+    fl_site_limit: string;
+    fr_site_limit: string;
+    tiv_2011: string;
+    tiv_2012: string;
+    eq_site_deductible: string;
+    hu_site_deductible: string;
+    fl_site_deductible: string;
+    fr_site_deductible: string;
+    point_latitude: string;
+    point_longitude: string;
+    line: string;
+    construction: string;
+    point_granularity: string;
+  };
