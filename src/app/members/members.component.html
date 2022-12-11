@@ -1,6 +1,6 @@
 <div class="title">
     <h1>Team members</h1>
-    <label class="counter">{{ membersCount }} users</label>
+    <label class="counter">{{ members.length }} users</label>
 </div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -24,81 +24,12 @@
         <td mat-cell *matCellDef="let element"> {{element.statecode}}/{{element.county}} </td>
     </ng-container>
 
-    <!-- <ng-container matColumnDef="eq_site_limit">
-        <th mat-header-cell *matHeaderCellDef> eq_site_limit </th>
-        <td mat-cell *matCellDef="let element"> {{element.eq_site_limit}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="hu_site_limit">
-        <th mat-header-cell *matHeaderCellDef> hu_site_limit </th>
-        <td mat-cell *matCellDef="let element"> {{element.hu_site_limit}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="fl_site_limit">
-        <th mat-header-cell *matHeaderCellDef> fl_site_limit </th>
-        <td mat-cell *matCellDef="let element"> {{element.fl_site_limit}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="fr_site_limit">
-        <th mat-header-cell *matHeaderCellDef> fr_site_limit </th>
-        <td mat-cell *matCellDef="let element"> {{element.fr_site_limit}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="tiv_2011">
-        <th mat-header-cell *matHeaderCellDef> tiv_2011 </th>
-        <td mat-cell *matCellDef="let element"> {{element.tiv_2011}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="tiv_2012">
-        <th mat-header-cell *matHeaderCellDef> tiv_2012 </th>
-        <td mat-cell *matCellDef="let element"> {{element.tiv_2012}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="eq_site_deductible">
-        <th mat-header-cell *matHeaderCellDef> eq_site_deductible </th>
-        <td mat-cell *matCellDef="let element"> {{element.eq_site_deductible}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="hu_site_deductible">
-        <th mat-header-cell *matHeaderCellDef> hu_site_deductible </th>
-        <td mat-cell *matCellDef="let element"> {{element.hu_site_deductible}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="fl_site_deductible">
-        <th mat-header-cell *matHeaderCellDef> fl_site_deductible </th>
-        <td mat-cell *matCellDef="let element"> {{element.fl_site_deductible}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="fr_site_deductible">
-        <th mat-header-cell *matHeaderCellDef> fr_site_deductible </th>
-        <td mat-cell *matCellDef="let element"> {{element.fr_site_deductible}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="point_latitude">
-        <th mat-header-cell *matHeaderCellDef> point_latitude </th>
-        <td mat-cell *matCellDef="let element"> {{element.point_latitude}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="point_longitude">
-        <th mat-header-cell *matHeaderCellDef> point_longitude </th>
-        <td mat-cell *matCellDef="let element"> {{element.point_longitude}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="line">
-        <th mat-header-cell *matHeaderCellDef> line </th>
-        <td mat-cell *matCellDef="let element"> {{element.line}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="construction">
-        <th mat-header-cell *matHeaderCellDef> construction </th>
-        <td mat-cell *matCellDef="let element"> {{element.construction}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="point_granularity">
-        <th mat-header-cell *matHeaderCellDef> point_granularity </th>
-        <td mat-cell *matCellDef="let element"> {{element.point_granularity}} </td>
-    </ng-container> -->
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns; let even = even;" [class.striped-row]="even"></tr>
 </table>
+
+<mat-paginator [length]="members.length" pageSize=20
+               (page)="getPaginatorData($event)"
+               showFirstLastButtons="false">
+</mat-paginator>

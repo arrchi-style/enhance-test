@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GetUsersService } from '../shared/get-users.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
     MembersRoutingModule,
     RouterModule.forChild(routes),
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     GetUsersService,

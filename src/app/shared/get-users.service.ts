@@ -21,7 +21,6 @@ export class GetUsersService {
         data => {
           this.papa.parse(data, {
             complete: (result) => {
-              // console.log('Parsed: ', result);
               const mappedUsers: IUser[] = result.data.map((item: string) => {
                 return {
                   policyID: item[0],
@@ -43,9 +42,10 @@ export class GetUsersService {
                   construction: item[16],
                   point_granularity: item[17],
                 }
-              })
+              });
 
-              console.log('mappedUsers: ', mappedUsers)
+              mappedUsers.shift();
+
               this._users$.next(mappedUsers);
             }
           });          
