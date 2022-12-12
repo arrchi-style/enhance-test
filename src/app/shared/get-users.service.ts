@@ -41,6 +41,7 @@ export class GetUsersService {
                   line: item[15],
                   construction: item[16],
                   point_granularity: item[17],
+                  policyID_statecode: `${item[1]}/${item[2]}`
                 }
               });
 
