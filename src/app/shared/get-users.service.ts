@@ -16,7 +16,9 @@ export class GetUsersService {
 
   public userArray: IUser[] = [];
   constructor(private http: HttpClient, private papa: Papa) {
-    this.http.get('assets/sample.csv', { responseType: 'text' })
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStTJMmO1--1CoMsyJb1YQ78nSXDArj0tkljZHNMhG9Qzq1F4_pk0wjVlHTgDSWl0PaG9WgPQda0aBx/pub?output=csv'
+
+    this.http.get(url, { responseType: 'text' })
       .subscribe(
         data => {
           this.papa.parse(data, {
